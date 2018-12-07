@@ -1,5 +1,11 @@
 import socket
 
+""" This file runs a simple client that connects to the SocketServer
+	Component running on the same device. It outputs all data
+	packets received. On Linux, netcat can be used instead (nc
+	localhost 5810).
+"""
+
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print("connecting to localhost:5810...")
