@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Config xml:lang="en">
+    <FrameGenerator>webcam</FrameGenerator>
+    <Processor>contour</Processor>
+    <PostProcessors>
+        <PostProcessor>socketserver</PostProcessor>
+    </PostProcessors>
+    <IgnorePostProcessorLoadErrors>false</IgnorePostProcessorLoadErrors>
+    <ComponentData>
+        <Component name="webcam">
+            <CameraID>-1</CameraID>
+            <Width>640</Width>
+            <Height>480</Height>
+            <FPS>30</FPS>
+        </Component>
+        <Component name="contour">
+            <HueRange>25-60</HueRange>
+            <LuminanceRange>90-250</LuminanceRange>
+            <SaturationRange>25-250</SaturationRange>
+            <WidthRange>100-400</WidthRange>
+            <HeightRange>100-400</HeightRange>
+            <AreaRange>4000-160000</AreaRange>
+            <OverlapThreshold>0.3</OverlapThreshold>
+        </Component>
+        <Component name="display">
+            <Annotate>true</Annotate>
+        </Component>
+        <Component name="video_file">
+            <FileName>test_files/test_video.mp4</FileName>
+            <ForceOutputSize>true</ForceOutputSize>
+            <ForcedOutputWidth>640</ForcedOutputWidth>
+            <ForcedOutputHeight>480</ForcedOutputHeight>
+        </Component>
+        <Component name="record">
+            <FileName>recordings/record.avi</FileName>
+            <ForceOutputSize>true</ForceOutputSize>
+            <ForcedOutputWidth>640</ForcedOutputWidth>
+            <ForcedOutputHeight>480</ForcedOutputHeight>
+            <TargetFPS>30</TargetFPS>
+            <Annotate>true</Annotate>
+        </Component>
+        <Component name="networktables">
+            <IP>roboRIO-1777-FRC.local</IP>
+            <OutputTable>SmartDashboard</OutputTable>
+            <FlushOnUpdate>true</FlushOnUpdate>
+        </Component>
+        <Component name="socketserver">
+            <Port>5810</Port>
+        </Component>
+    </ComponentData>
+</Config>
