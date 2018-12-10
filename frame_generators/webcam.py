@@ -42,6 +42,6 @@ class WebcamFrameGenerator(FrameGeneratorBase):
     def get_frame(self) -> ndarray:
         rval, frame = self.cap.read()
         if not rval:
-            raise FrameGeneratorBase.RvalException()
+            raise FrameGeneratorBase.FrameException()
         
         return frame

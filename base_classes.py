@@ -39,8 +39,8 @@ class FrameGeneratorBase(Component):
         """
         pass
 
-    class RvalException(Exception):
-        """ Raised when the frame generator cannot be created.
+    class FrameException(Exception):
+        """ Raised when the frame generator cannot create frames.
         """
         pass
 

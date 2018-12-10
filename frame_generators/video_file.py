@@ -43,7 +43,7 @@ class VideoFileFrameGenerator(FrameGeneratorBase):
     def get_frame(self) -> ndarray:
         rval, frame = self.cap.read()
         if not rval:
-            raise FrameGeneratorBase.RvalException()
+            raise FrameGeneratorBase.FrameException()
         
         if self.force_output_size:
             frame = cv2.resize(frame, (self.forced_output_width, self.forced_output_height))
