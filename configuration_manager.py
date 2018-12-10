@@ -7,11 +7,16 @@ import logging
 
 
 class ComponentLoadError(Exception):
+    """ Raised when a component's file does not exist or when a component
+        of the correct type cannot be found in the file.
+    """
     def __init__(self, msg: str):
         super(ComponentLoadError, self).__init__(self, msg)
 
 
 class ComponentConfigureError(Exception):
+    """ Raised when the configuration file does not contain data for a component.
+    """
     def __init__(self, msg: str):
         super(ComponentConfigureError, self).__init__(self, msg)
 

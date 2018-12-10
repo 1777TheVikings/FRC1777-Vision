@@ -29,7 +29,7 @@ class SocketServerPostProcessor(PostProcessorBase):
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.sock.bind(('0.0.0.0', self.port))
         self.sock.listen(5)
-        logging.debug("Server listening on seaport " + str(self.port))
+        logging.debug("Server listening on port " + str(self.port))
         
         self.read_list = [self.sock]
         self.write_list = []
